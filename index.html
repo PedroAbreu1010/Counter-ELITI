@@ -57,15 +57,16 @@
         </section>
 
         <script>
+            // variável "numero"
             let numero = 0
 
             // Funções dos botões de diminuir/aumentar/resetar
             function diminuir() {
-                numero = numero - 1
+                numero--
                 render()
             }
             function aumentar() {
-                numero = numero + 1
+                numero++
                 render()
             }
             function resetar() {
