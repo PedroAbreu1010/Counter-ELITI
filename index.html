@@ -11,6 +11,7 @@
             }
 
             body {
+                border: 12px solid rgba(225, 225, 225, 0.1);
                 min-height: 100vh;
                 background: black;
                 color: white;
@@ -40,7 +41,7 @@
             </h1>
 
             <p>
-                --
+                0
             </p>
 
             <button onclick = "diminuir()">
@@ -71,8 +72,7 @@
             }
             function resetar() {
                 const p = document.querySelector("p")
-                p.innerText = "--"
-                numero = 0
+                p.innerText = numero = 0
             }
 
             // Função que atualiza o estado da aplicação
