@@ -1,10 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Counter-ELITE</title>
-        <stile></stile>
-    </head>
-    <body>
+        <title>
+            Counter-ELITI
+        </title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
 
+            body {
+                min-height: 100vh;
+                background: black;
+                color: white;
+                display: grid;
+                place-items: center;
+            
+            }
+
+            section {
+               background: rgba(225, 225, 225, 0.1);
+               padding: 20px;
+               border-radius: 5px;
+               text-align: center;
+            }
+
+            p {
+                font-size: 100px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section>
+            <!-- Elementos do contador em HTML -->
+            <h1>
+                Super Contador
+            </h1>
+
+            <p>
+                --
+            </p>
+
+            <button onclick = "diminuir()">
+                Menos
+            </button>
+
+            <button onclick = "aumentar()">
+                Mais
+            </button>
+
+            <button onclick = "resetar()">
+                Reset
+            </button>
+        </section>
+
+        <script>
+            let numero = 0
+
+            // Funções dos botões de diminuir/aumentar/resetar
+            function diminuir() {
+                numero = numero - 1
+                render()
+            }
+            function aumentar() {
+                numero = numero + 1
+                render()
+            }
+            function resetar() {
+                const p = document.querySelector("p")
+                p.innerText = "--"
+                numero = 0
+            }
+
+            // Função que atualiza o estado da aplicação
+            function render() {
+                const p = document.querySelector("p")
+                p.innerText = numero
+            }
+        </script>
     </body>
 </html>
