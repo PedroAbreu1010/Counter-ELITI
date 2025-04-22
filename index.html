@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -16,15 +15,15 @@
             }
 
             body {
-                min-height: 100vh;
-                background: rgb(69, 156, 255);
-                color: rgb(52, 109, 175);
+                background: rgb(77, 142, 216);
+                color: white;
                 display: grid;
                 place-items: center;
+                min-height: 100vh;
             }
 
             section {
-                background: hsl(0, 0%, 100%);
+                background: black;
                 padding: 30px;
                 border-radius: 5px;
                 text-align: center;
@@ -56,12 +55,12 @@
                 Menos
             </button>
 
-            <button onclick = "aumentar()">
-                Mais
-            </button>
-
             <button onclick = "resetar()">
                 Reset
+            </button>
+
+            <button onclick = "aumentar()">
+                Mais
             </button>
         </section>
 
@@ -74,15 +73,15 @@
                 numero--
                 render()
             }
-            function aumentar() {
-                numero++
-                render()
-            }
             function resetar() {
                 const p = document.querySelector("p")
                 p.innerText = numero = 0
             }
-
+            function aumentar() {
+                numero++
+                render()
+            }
+           
             // Função que atualiza o estado da aplicação
             function render() {
                 const p = document.querySelector("p")
