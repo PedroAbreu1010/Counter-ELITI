@@ -26,12 +26,16 @@
                 border-radius: 5px;
                 text-align: center;
             }
+            h1 {
+                font-size: 40px;
+            }
             p {
                 font-size: 100px;
             }
             button {
-                color: rgb(52, 109, 175);
-                border: rgb(52, 109, 175);
+                background: black;
+                color: white;
+                border: black;
             }
         </style>
     </head>
@@ -47,16 +51,24 @@
                 0
             </p>
 
+            <button onclick = "diminuir5()">
+                <b> - 5 </b>
+            </button>
+
             <button onclick = "diminuir()">
-                Menos
+                <b> - 1 </b>
             </button>
 
             <button onclick = "resetar()">
-                Reset
+                <b> Reset </b>
             </button>
 
             <button onclick = "aumentar()">
-                Mais
+                <b> + 1 </b>
+            </button>
+
+            <button onclick = "aumentar5()">
+                <b> + 5 </b>
             </button>
         </section>
 
@@ -64,7 +76,11 @@
             // variável "numero"
             let numero = 0
 
-            // Funções dos botões de diminuir/aumentar/resetar
+            // Funções dos botões de diminuir/resetar/aumentar
+            function diminuir5() {
+                numero = numero - 5
+                render()
+            }
             function diminuir() {
                 numero--
                 render()
@@ -75,6 +91,10 @@
             }
             function aumentar() {
                 numero++
+                render()
+            }
+            function aumentar5() {
+                numero = numero + 5
                 render()
             }
            
