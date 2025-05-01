@@ -18,13 +18,19 @@
                 box-sizing: border-box;
                 font-family: "Urbanist", sans-serif;
             }
+
             body {
-                background: rgb(77, 142, 216);
+                background: linear-gradient(
+                    90deg,
+                    rgb(77, 142, 216, 1) 0%, 
+                    rgb(84, 240, 188) 100%
+                );
                 color: white;
                 display: grid;
                 place-items: center;
                 min-height: 100vh;
             }
+
             section {
                 background: black;
                 padding: 40px;
@@ -34,12 +40,15 @@
                 max-width: 300px;
                 box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             }
+
             h1 {
                 font-size: 40px;
             }
+
             p {
                 font-size: 100px;
             }
+
             button {
                 background: black;
                 color: white;
