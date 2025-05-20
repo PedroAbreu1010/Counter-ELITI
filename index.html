@@ -12,114 +12,46 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        <style>
-            * {
-                margin: 0;
-                box-sizing: border-box;
-                font-family: "Urbanist", sans-serif;
-            }
-
-            body {
-                background: linear-gradient(
-                    90deg,
-                    rgb(77, 142, 216, 1) 0%, 
-                    rgb(84, 240, 188) 100%
-                );
-                color: white;
-                display: grid;
-                place-items: center;
-                min-height: 100vh;
-            }
-
-            section {
-                background: black;
-                padding: 40px;
-                border-radius: 5px;
-                text-align: center;
-                width: 90%;
-                max-width: 300px;
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            }
-
-            h1 {
-                font-size: 40px;
-            }
-
-            p {
-                font-size: 100px;
-            }
-
-            button {
-                background: black;
-                color: white;
-                border: black;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <section>
-            <!-- Elementos do contador em HTML -->
-            <h1>
-                CONTADOR
-            </h1>
+        <div class="borda">
+            <!-- Elementos do contador -->
+            <div class="elementos">
+                <h1>
+                    CONTADOR
+                </h1>
 
-            <p>
-                0
-            </p>
+                <p>
+                    0
+                </p>
 
-            <button onclick = "diminuir5()">
-                <b> - 5 </b>
-            </button>
+                <div class="botoes">
+                    <button onclick="diminuir5()">
+                        <b> - 5 </b>
+                    </button>
 
-            <button onclick = "diminuir()">
-                <b> - 1 </b>
-            </button>
+                    <button onclick="diminuir()">
+                        <b> - 1 </b>
+                    </button>
 
-            <button onclick = "resetar()">
-                <b> Reset </b>
-            </button>
+                    <button onclick="resetar()">
+                        <b> Reset </b>
+                    </button>
 
-            <button onclick = "aumentar()">
-                <b> + 1 </b>
-            </button>
+                    <button onclick="aumentar()">
+                        <b> + 1 </b>
+                    </button>
 
-            <button onclick = "aumentar5()">
-                <b> + 5 </b>
-            </button>
-        </section>
+                    <button onclick="aumentar5()">
+                        <b> + 5 </b>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-        <script>
-            // variável "numero"
-            let numero = 0
-
-            // Funções dos botões de diminuir/resetar/aumentar
-            function diminuir5() {
-                numero = numero - 5
-                render()
-            }
-            function diminuir() {
-                numero--
-                render()
-            }
-            function resetar() {
-                const p = document.querySelector("p")
-                p.innerText = numero = 0
-            }
-            function aumentar() {
-                numero++
-                render()
-            }
-            function aumentar5() {
-                numero = numero + 5
-                render()
-            }
-           
-            // Função que atualiza o estado da aplicação
-            function render() {
-                const p = document.querySelector("p")
-                p.innerText = numero
-            }
+        <script src="script.js">
         </script>
     </body>
 </html>
